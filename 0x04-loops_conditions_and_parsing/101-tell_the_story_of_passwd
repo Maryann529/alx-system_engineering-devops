@@ -1,18 +1,8 @@
 #!/usr/bin/env bash
-#
-# Tell the story of each account in /etc/passwd
-# Account format is <login>:<password>:<uid>:<gid>:<name>:<home>:<shell>
-# Also see passwd(5)
+# displays a story with each line of /etc/passwd.
 
-storytime()
-{
-    cat
-} <<@STOP
-The user $1 is part of the $4 gang, lives in $6 and rides $7. $3's place is \
-protected by the passcode $2, more info about the user here: $5
-@STOP
-
-while IFS=':' read -ra account
+input="/etc/passwd"
+while IFS=: read -r f1 f2 f3 f4 f5 f6 f7
 do
-    storytime "${account[@]}"
-done </etc/passwd
+    echo "The user $f1 is part of the $f4 gang, lives in $f6 and rides $f7. $f3's place is protected by the passcode $f2, more info about the user here: $f5"
+done < "$input"
