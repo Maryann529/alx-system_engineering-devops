@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
-#
-# Display the contents of the current directory with prefixes stripped
+# displays the content of the current working directory.
 
-shopt -s nullglob
-
-for file in *
+for i in *
 do
-    echo "${file#*-}"
+    echo "$i" | cut -d'-' -f2
 done
