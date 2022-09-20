@@ -14,10 +14,10 @@ s@^\troot /var/www/html;$@&\n\trewrite ^/redirect_me '"${NYANCAT}"' permanent;@
 cat > /var/www/html/index.html << 'EOF' 
 <html>
   <head>
-    <title>Holberton School</title>
+    <title>School</title>
   </head>
   <body>
-    <p>Holberton School for the win!</p>
+    <p>School for the win!</p>
   </body>
 </html>
 EOF
