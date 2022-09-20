@@ -1,21 +1,8 @@
 #!/usr/bin/env bash
-#
-# Install NGINX on my server
+# installs nginx and configures it on a remote server
 
 apt-get -y update
 apt-get -y install nginx
-
-cat > /var/www/html/index.html << 'EOF' 
-<html>
-  <head>
-    <title>Holberton School</title>
-  </head>
-  <body>
-    <p>Holberton School for the win!</p>
-  </body>
-</html>
-EOF
-
-service nginx start
-
 ufw allow 'Nginx HTTP'
+echo 'Holberton School' > /var/www/html/index.nginx-debian.html
+service nginx start
