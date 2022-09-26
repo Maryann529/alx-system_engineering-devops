@@ -10,8 +10,8 @@ cat >> /etc/haproxy/haproxy.cfg << EOF
 backend web-backend
 	balance roundrobin
 	mode http
-	server 801-web-01 35.196.167.155:80 check
-	server 801-web-02 34.73.252.236:80 check
+	server 26544-web-01 3.236.97.145:80 check
+	server 26544-web-02-44.210.19.169:80 check
 
 frontend web-frontend
 	bind *:80
