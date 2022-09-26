@@ -13,10 +13,10 @@ sed -i '/^\troot \/var\/www\/html;$/a rewrite ^/redirect_me https://www.google.c
 cat > /var/www/html/index.html << 'EOF' 
 <html>
   <head>
-    <title>Holberton School</title>
+    <title>School</title>
   </head>
   <body>
-    <p>Holberton School for the win!</p>
+    <p>School for the win!</p>
   </body>
 </html>
 EOF
